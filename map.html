@@ -44,10 +44,10 @@
       zoom: 10 // the zoom level to display when the map first loads
     });
 
-    const popup = new mapboxgl.Popup({ closeOnClick: false })
-      .setLngLat([-96, 37.8])
-      .setHTML('<h1>Hello World!</h1>')
-      .addTo(map);
+    map.on('click', (event) => {
+      const clickedPoint = [event.lngLat.lng, event.lngLat.lat];
+      console.log(JSON.stringify(clickedPoint));
+    });
 
     </script>
   </body>
