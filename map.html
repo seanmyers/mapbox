@@ -55,7 +55,7 @@
     map.on('click', 'NG Phase 3 Feeders', (e) => {
     new mapboxgl.Popup()
     .setLngLat(e.lngLat)
-    .setHTML(e.features[0].properties.range)
+    .setHTML(e.features[0].properties.RANGE)
     .addTo(map);
     });
 
