@@ -53,12 +53,12 @@
     // open a popup at the location of the click, with description
     // HTML from the click event's properties.
     map.on('click', 'NG Phase 3 Feeders', (e) => {
-      var title = <h3>Hosting Capacity</h3>;
       var value = e.features[0].properties.RANGE;
-    new mapboxgl.Popup()
-    .setLngLat(e.lngLat)
-    .setHTML(title + 'Hosting Capacity: ' + value)
-    .addTo(map);
+
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML('Hosting Capacity: ' + value)
+      .addTo(map);
     });
 
     // Change the cursor to a pointer when
