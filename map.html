@@ -41,7 +41,7 @@
       style: 'mapbox://styles/myerssd01/cl0iml5ve000k14r0mevczmxo', //TODO replace this with YOUR style URL! This tells the map which style to use
       container: 'map', // id of the container div we created above
       center: [-78.182, 43.000], // the location to display when the map first loads
-      zoom: 10 // the zoom level to display when the map first loads
+      zoom: 15 // the zoom level to display when the map first loads
     });
 
     map.on('click', (event) => {
@@ -55,7 +55,7 @@
     map.on('click', 'NG Phase 3 Feeders', (e) => {
     new mapboxgl.Popup()
     .setLngLat(e.lngLat)
-    .setHTML(e.features[0].properties.RANGE)
+    .setHTML('Hosting Capacity:' + e.features[0].properties.RANGE)
     .addTo(map);
     });
 
