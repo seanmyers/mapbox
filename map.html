@@ -52,22 +52,22 @@
     // When a click event occurs on a feature in the states layer,
     // open a popup at the location of the click, with description
     // HTML from the click event's properties.
-    map.on('click', 'USFS Wetlands', (e) => {
+    map.on('click', 'NG Phase 3 Feeder', (e) => {
     new mapboxgl.Popup()
     .setLngLat(e.lngLat)
-    .setHTML(e.features[0].properties.WETLAND_TY)
+    .setHTML(e.features[0].properties.range)
     .addTo(map);
     });
 
     // Change the cursor to a pointer when
     // the mouse is over the states layer.
-    map.on('mouseenter', 'USFS Wetlands', () => {
+    map.on('mouseenter', 'NG Phase 3 Feeder', () => {
     map.getCanvas().style.cursor = 'pointer';
     });
 
     // Change the cursor back to a pointer
     // when it leaves the states layer.
-    map.on('mouseleave', 'USFS Wetlands', () => {
+    map.on('mouseleave', 'NG Phase 3 Feeder', () => {
     map.getCanvas().style.cursor = '';
     });
 
