@@ -55,9 +55,7 @@
     map.on('click', 'NG Phase 3 Feeders', (e) => {
     new mapboxgl.Popup()
     .setLngLat(e.lngLat)
-    .setHTML(
-      <h3>HCA Values</h3><p>Hosting Capacity: + e.features[0].properties.RANGE</p>
-    )
+    .setHTML('Hosting Capacity: ' + e.features[0].properties.RANGE)
     .addTo(map);
     });
 
